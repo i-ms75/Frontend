@@ -1,0 +1,38 @@
+CREATE MEMORY TABLE "PUBLIC"."medicine"(
+    "id" INTEGER NOT NULL,
+    "batch_no" CHARACTER VARYING(255),
+    "bill_no" CHARACTER VARYING(255),
+    "company_name" CHARACTER VARYING(255),
+    "expiry_date" TIMESTAMP,
+    "free_quantity" CHARACTER VARYING(255),
+    "manufacturing_date" TIMESTAMP,
+    "name" CHARACTER VARYING(255),
+    "payment" CHARACTER VARYING(255),
+    "payment_on_purchase" CHARACTER VARYING(255),
+    "purchased_on" CHARACTER VARYING(255),
+    "quantity" CHARACTER VARYING(255),
+    "remarks" CHARACTER VARYING(255),
+    "retail_per_tablet" CHARACTER VARYING(255),
+    "retail_rate_strip" CHARACTER VARYING(255),
+    "stock_point" CHARACTER VARYING(255),
+    "tablet_per_strip" CHARACTER VARYING(255),
+    "wholesale_rate" CHARACTER VARYING(255)
+);
+
+
+
+
+ALTER TABLE "PUBLIC"."medicine" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C" PRIMARY KEY("id");
+
+
+CREATE MEMORY TABLE "PUBLIC"."pos"(
+    "id" INTEGER NOT NULL,
+    "batch_no" CHARACTER VARYING(255),
+    "date" TIMESTAMP,
+    "expiry_date" TIMESTAMP,
+    "name" CHARACTER VARYING(255),
+    "quantity" CHARACTER VARYING(255)
+);
+
+
+ALTER TABLE "PUBLIC"."pos" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_1" PRIMARY KEY("id");

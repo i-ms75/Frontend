@@ -1,0 +1,6 @@
+nav{
+    position: fixed; /* Set the navbar to fixed position */
+    /* top: 0; */
+    width:100%;
+    float: left;
+}
