@@ -118,7 +118,8 @@ export class GridViewComponent implements OnInit {
   onCellClicked( e: CellClickedEvent): void
    {
       console.log('cellClicked', e);
-  }
+  }this.rowData=this.http.get<any[]>('http://localhost:8081/searchMedicines');
+    this.http.get<any[]>('http://localhost:8081/searchMedicines').subscribe(data=>console.log(data));
  
   // Example using Grid's API
   clearSelection(): void {
@@ -140,10 +141,11 @@ export class GridViewComponent implements OnInit {
 import { Component, OnInit , ViewChild} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridAngular } from 'ag-grid-angular';
-import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
+import { CellClickedEvent, ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { Observable ,throwError} from 'rxjs';
 import { catchError,retry } from 'rxjs/operators';
 import { AgList } from 'ag-grid-community/dist/lib/widgets/agList';
+
 @Component({
   selector: 'app-grid-view',
   templateUrl: './grid-view.component.html',
@@ -151,8 +153,11 @@ import { AgList } from 'ag-grid-community/dist/lib/widgets/agList';
 })
 export class GridViewComponent implements OnInit {
   companyList:any;
+  options: string[] = [];
+  
   title = 'frontEnd';
   public columnDefs: ColDef[] = [
+    
     { field: 'id', width:10},
     { field: 'name', width:115},
     { field: 'batch_no' , width:115},
@@ -190,11 +195,17 @@ export class GridViewComponent implements OnInit {
   onGridReady(params: GridReadyEvent) {
     
     this.rowData=this.http.get<any[]>('http://localhost:8081/searchMedicines');
-    this.http.get<any[]>('http://localhost:8081/searchMedicines').subscribe(data=>console.log(data));
-    console.log(this.http.get('http://localhost:8081/searchMedicines'));
-    console.log(this.rowData);
+    this.http.get<any[]>('http://localhost:8081/searchMedicines').subscribe(data=>
+    {
+      console.log(data);
+    }
+    
+    );
+    // console.log(this.http.get('http://localhost:8081/searchMedicines'));
+    // console.log(this.rowData);
    
     // this.rowData$ = this.http.get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
+    //
   }
 
  

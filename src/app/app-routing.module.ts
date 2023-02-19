@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GridViewComponent } from './grid-view/grid-view.component';
-import { LoginComponent } from './login/login.component';
+
+import { POSComponent } from './pos/pos.component';
 
 const routes: Routes = [
   {path:'GridView', component:GridViewComponent},
-  {path:'Login', component:LoginComponent},
+  
+  {path:'POS', component:POSComponent},
+ 
   // {path:'/'}
 ]
 ;

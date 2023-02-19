@@ -7,42 +7,46 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="/" class="nav-link active" aria-current="page">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-              Home
-            </a>
+            <!-- <a href="/" class="nav-link active" aria-current="page">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg> -->
+            <button class="nav-link text-white" width="16" height="16"(click)="goHome()">Home</button>
+            <!-- </a> -->
           </li>
           <li>
-            <a href="/GridView" class="nav-link text-white" click="viewData()" >
+            <!-- <a href="/GridView" class="nav-link text-white" click="viewData()" >
               <svg class="bi me-2" width="16" height="16"></svg>
               Dashboard              
-            </a> 
-            <!-- <button (click)="viewData()">Dashboard</button> -->
+            </a>  -->
+            <button class="nav-link text-white" width="16" height="16"(click)="viewData()">Dashboard</button>
 
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <!-- <a href="#" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-              POS
-            </a>
+              POS -->
+            <!-- </a> -->
+            <button class="nav-link text-white" width="16" height="16"(click)="pos()">POS</button>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <!-- <a href="#" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
               AboutToExpire
-            </a>
+            </a> -->
+            <button class="nav-link text-white" width="16" height="16"(click)="viewData()">AboutToExpire</button>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <!-- <a href="#" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               WholeSeller
-            </a>
+            </a> -->
+            <button class="nav-link text-white" width="16" height="16"(click)="viewData()">WholeSeller</button>
           </li>
           <li>
-            <a href="/Login" class="nav-link text-white">
+            <!-- <a href="/Login" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               Login
-            </a>
+            </a> -->
+            <button class="nav-link text-white" width="16" height="16"(click)="login()">Logout</button>
           </li>
         </ul>
         <hr>

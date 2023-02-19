@@ -14,6 +14,18 @@ export class SidebarComponent implements OnInit {
     console.log("Called");
     this.route.navigateByUrl("/GridView");
   }
+  goHome()
+  {
+    this.route.navigateByUrl("/");
+  }
+  pos()
+  {
+    this.route.navigateByUrl("POS");
+  }
+  login()
+  {
+    this.route.navigateByUrl("Login");
+  }
 
   ngOnInit(): void {
   }

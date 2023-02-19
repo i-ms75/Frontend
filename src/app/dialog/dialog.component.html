@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Add Item to Cart</h2>
+    <mat-dialog-content>
+      <p>Enter the ID of the item you want to add to the cart:</p>
+      <mat-form-field>
+        <input matInput [(ngModel)="itemId"]>
+    </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="itemId" cdkFocusInitial>Add</button>
+    </mat-dialog-actions>

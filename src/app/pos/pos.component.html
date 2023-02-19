@@ -1,0 +1,68 @@
+<form class="example-form">
+  <div style="display: flex; align-items: center">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <!-- <mat-label>Number</mat-label> -->
+      <input type="text"
+             placeholder="type medicine name"             
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options " [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="Quantity" appearance="outline">
+      <input  type="number"
+             placeholder="Quantity"             
+             matInput
+             [formControl]="myNumber">
+    </mat-form-field>
+    
+    <div style="width: 10px;"></div>
+    <!-- <button mat-raised-button color="primary" (click)="Add($event)">Add</button> -->
+    <button mat-raised-button color="primary" (click)="Add($event)">Add</button>
+    
+  </div>
+    
+</form>
+
+<div class="posForm">
+  <form >
+    <div class="table">
+      <table border="solid">
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          
+          <th>Rate</th>
+          <th>Discount %</th>
+          <th>Total</th>
+        </tr>
+        <tr *ngFor="let medicine of cart">
+        <td>{{ medicine.name }}</td>
+        <td>
+          {{medicine.quantity}}
+        </td>
+        <td>{{medicine.rate}}</td>
+        <td><mat-form-field class="Discount" appearance="outline">
+          <input type="number"
+          placeholder="Discount"             
+               matInput
+               [formControl]="Discount">
+        </mat-form-field></td>
+        <td>{{medicine.quantity*medicine.rate}}</td>
+        
+      </tr>
+      
+      </table>
+    </div>
+    <button class="Submit" mat-raised-button color="primary" (click)="Sale($event)">Submit</button>
+  </form>
+</div>
+
+
+
+

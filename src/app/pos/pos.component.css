@@ -1,0 +1,46 @@
+.example-form {
+  min-width: 150px !important;
+  max-width: 500px !important;
+  width: 100% !important;
+  margin-left: 30% !important;
+  margin-top: 50px !important;
+}
+
+.example-full-width {
+  width: 100% !important;
+}
+
+
+.mat-raised-button
+{
+  background-color: green;
+  margin-top: -15px;
+  /* margin-left: 110%;
+  margin-top: -50px;
+  float: inline-start; */
+  /* height: 50px; */
+}
+
+table {
+  width: 40%;
+  margin-left: 30%;
+}
+.mat-table
+{
+  width: 900px;
+  margin-left: 20%;
+}
+mat-option{
+  background: transparent;
+}
+.Quantity
+{
+  width: 20%;
+}
+.Submit{
+  margin-left: 65%;
+}
+.Discount
+{
+  width: 30%;
+}

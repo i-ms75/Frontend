@@ -5,9 +5,9 @@
     height: -webkit-fill-available;
     max-height: 100vh;
     margin-top: 0%;
-    /* overflow-x: auto; */
-    /* overflow-y: hidden; */
-    position: fixed; /* Set the navbar to fixed position */
-    /* top: 0; */
+    overflow-x: auto; 
+    overflow-y: hidden;
+    position: fixed; 
+    top: 0;
     width:100%;
 }
